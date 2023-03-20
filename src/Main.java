@@ -2,13 +2,14 @@
 public class Main {
     public static void main(String[] args) {
        int value = 70;
-       //validate(value, new ValidatorImpl());
-       validate(value, new Validator() {
-           @Override
-           public boolean validate(int value) {
-               return value >= 80;
-           }
-       });
+       //validate(value, new ValidatorImpl());  1
+//       validate(value, new Validator() {      2
+//           @Override
+//           public boolean validate(int value) {
+//               return value >= 80;
+//           }
+//       });
+        validate(value, (int value1) -> value >= 80);
 
     }
 
